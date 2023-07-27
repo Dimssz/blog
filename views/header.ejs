@@ -1,0 +1,36 @@
+
+        <header>
+            <div class="navigation">
+            <div class="logo">
+                <a href="/"><p>MY BLOG</p></a>
+            </div>
+                <ul class="navs">
+                    <li><a href="/top"><p class="nav">Home</p></li></a>
+                    <% if(locals.isLoggedIn){ %>
+
+                   <% } else {%>
+                    <li><a href="/register"><p class="nav">Pendaftaran</p></a></li>
+                    <% } %>
+                    
+                    <% if(locals.isLoggedIn){ %>
+                        <li><a href="/logout"><p class="nav">Logout</p></a></li>
+                   <% } else{%>
+                        <li><a href="/login"><p class="nav">Login</p></a></li>
+                <% } %>
+                </ul>
+                <div class="nav-bar">
+                    <i class="fas fa-list fa-2x"></i>
+                </div>
+        </div>
+        <div class="welcome-name">
+            <p>Selamat datang, <%=locals.username%></p>
+        </div>
+        <div class="text">
+            <p>Creativity Has No Limit</p>
+            <div class="text-head">
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit" </p>
+        </div>
+        </div>
+        </header>
+        
+        
